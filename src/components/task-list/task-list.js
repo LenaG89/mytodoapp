@@ -2,15 +2,7 @@ import React from 'react';
 import Task from '../task';
 import PropTypes from 'prop-types';
 
-const TaskList = ({
-  todos,
-  onDeleted,
-  onToggleCheck,
-  onCliearCompleted,
-  onEditTask,
-  onChangeEditing,
-  activeFilter,
-}) => {
+const TaskList = ({ todos, onDeleted, onToggleCheck, onEditTask, onChangeEditing, activeFilter }) => {
   const filtredTask = todos.filter((el) => {
     if (activeFilter === 1) return true;
     if (activeFilter === 2) return !el.checked;
